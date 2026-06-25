@@ -1,0 +1,143 @@
+{
+  "top1_reference": "CodeT5-base  StratA (FullFT)",
+  "nb_configs_testees": 6,
+  "nb_stables": 6,
+  "taux_stabilite_pct": 100.0,
+  "ecart_max_score": 0.023799999999999932,
+  "marge_moy_top1_top2": 0.004366666666666667,
+  "marge_min_top1_top2": 0.0030000000000000027,
+  "configs": {
+    "Nominaux      (0.30/0.25/0.20/0.15/0.10)": {
+      "poids": {
+        "bert_f1": 0.3,
+        "meteor": 0.25,
+        "rouge_l": 0.2,
+        "syn_val": 0.15,
+        "op_prec": 0.1
+      },
+      "top1": "CodeT5-base  StratA (FullFT)",
+      "scores": {
+        "CodeT5-base  StratA (FullFT)": 0.9431,
+        "CodeT5-base  StratB (FrozenEnc)": 0.9288,
+        "CodeT5+ 770M StratA (FullFT)": 0.9289,
+        "CodeT5+ 770M StratB (FrozenEnc)": 0.9386
+      },
+      "classement": [
+        "CodeT5-base  StratA (FullFT)",
+        "CodeT5+ 770M StratB (FrozenEnc)",
+        "CodeT5+ 770M StratA (FullFT)",
+        "CodeT5-base  StratB (FrozenEnc)"
+      ]
+    },
+    "Uniformes      (0.20/0.20/0.20/0.20/0.20)": {
+      "poids": {
+        "bert_f1": 0.2,
+        "meteor": 0.2,
+        "rouge_l": 0.2,
+        "syn_val": 0.2,
+        "op_prec": 0.2
+      },
+      "top1": "CodeT5-base  StratA (FullFT)",
+      "scores": {
+        "CodeT5-base  StratA (FullFT)": 0.9353,
+        "CodeT5-base  StratB (FrozenEnc)": 0.9269,
+        "CodeT5+ 770M StratA (FullFT)": 0.922,
+        "CodeT5+ 770M StratB (FrozenEnc)": 0.9314
+      },
+      "classement": [
+        "CodeT5-base  StratA (FullFT)",
+        "CodeT5+ 770M StratB (FrozenEnc)",
+        "CodeT5-base  StratB (FrozenEnc)",
+        "CodeT5+ 770M StratA (FullFT)"
+      ]
+    },
+    "BERT dominant  (0.50/0.20/0.15/0.10/0.05)": {
+      "poids": {
+        "bert_f1": 0.5,
+        "meteor": 0.2,
+        "rouge_l": 0.15,
+        "syn_val": 0.1,
+        "op_prec": 0.05
+      },
+      "top1": "CodeT5-base  StratA (FullFT)",
+      "scores": {
+        "CodeT5-base  StratA (FullFT)": 0.9591,
+        "CodeT5-base  StratB (FrozenEnc)": 0.9469,
+        "CodeT5+ 770M StratA (FullFT)": 0.9482,
+        "CodeT5+ 770M StratB (FrozenEnc)": 0.9556
+      },
+      "classement": [
+        "CodeT5-base  StratA (FullFT)",
+        "CodeT5+ 770M StratB (FrozenEnc)",
+        "CodeT5+ 770M StratA (FullFT)",
+        "CodeT5-base  StratB (FrozenEnc)"
+      ]
+    },
+    "Sans validité  (0.35/0.30/0.25/0.00/0.10)": {
+      "poids": {
+        "bert_f1": 0.35,
+        "meteor": 0.3,
+        "rouge_l": 0.25,
+        "syn_val": 0.0,
+        "op_prec": 0.1
+      },
+      "top1": "CodeT5-base  StratA (FullFT)",
+      "scores": {
+        "CodeT5-base  StratA (FullFT)": 0.9435,
+        "CodeT5-base  StratB (FrozenEnc)": 0.9226,
+        "CodeT5+ 770M StratA (FullFT)": 0.9265,
+        "CodeT5+ 770M StratB (FrozenEnc)": 0.9381
+      },
+      "classement": [
+        "CodeT5-base  StratA (FullFT)",
+        "CodeT5+ 770M StratB (FrozenEnc)",
+        "CodeT5+ 770M StratA (FullFT)",
+        "CodeT5-base  StratB (FrozenEnc)"
+      ]
+    },
+    "NLP pur        (0.40/0.33/0.27/0.00/0.00)": {
+      "poids": {
+        "bert_f1": 0.4,
+        "meteor": 0.33,
+        "rouge_l": 0.27,
+        "syn_val": 0.0,
+        "op_prec": 0.0
+      },
+      "top1": "CodeT5-base  StratA (FullFT)",
+      "scores": {
+        "CodeT5-base  StratA (FullFT)": 0.9492,
+        "CodeT5-base  StratB (FrozenEnc)": 0.9236,
+        "CodeT5+ 770M StratA (FullFT)": 0.9314,
+        "CodeT5+ 770M StratB (FrozenEnc)": 0.9433
+      },
+      "classement": [
+        "CodeT5-base  StratA (FullFT)",
+        "CodeT5+ 770M StratB (FrozenEnc)",
+        "CodeT5+ 770M StratA (FullFT)",
+        "CodeT5-base  StratB (FrozenEnc)"
+      ]
+    },
+    "Struct. first  (0.20/0.15/0.15/0.35/0.15)": {
+      "poids": {
+        "bert_f1": 0.2,
+        "meteor": 0.15,
+        "rouge_l": 0.15,
+        "syn_val": 0.35,
+        "op_prec": 0.15
+      },
+      "top1": "CodeT5-base  StratA (FullFT)",
+      "scores": {
+        "CodeT5-base  StratA (FullFT)": 0.9398,
+        "CodeT5-base  StratB (FrozenEnc)": 0.9368,
+        "CodeT5+ 770M StratA (FullFT)": 0.9298,
+        "CodeT5+ 770M StratB (FrozenEnc)": 0.9368
+      },
+      "classement": [
+        "CodeT5-base  StratA (FullFT)",
+        "CodeT5-base  StratB (FrozenEnc)",
+        "CodeT5+ 770M StratB (FrozenEnc)",
+        "CodeT5+ 770M StratA (FullFT)"
+      ]
+    }
+  }
+}
