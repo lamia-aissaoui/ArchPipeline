@@ -1,0 +1,183 @@
+id,operation,adl_type,request,reference,archpipeline_prediction,direct_evolution_prediction,arch_identifier_preservation,arch_port_connector_binding,arch_property_value_correctness,arch_structural_placement,arch_formalism_constraint_satisfaction,arch_fully_correct,arch_failure_mode,arch_justification,de_identifier_preservation,de_port_connector_binding,de_property_value_correctness,de_structural_placement,de_formalism_constraint_satisfaction,de_fully_correct,de_failure_mode,de_justification,rater,review_date
+0,ADD_CONNECTOR,ACME,Insert a new msgQueue1 connector of type MessageQueue into MainSystem,"Connector msgQueue1 : MessageQueue;
+  Attachments { client.send-request to rpc.sender ; server.receive-request to rpc.receiver }","Connector msgQueue1 : MessageQueue;
+  Attachments { client.send-request to rpc.sender ; server.receive-request from rpc.receiver }","Connector msgQueue1 : MessageQueue;
+  Attachments { client.send-request to rpc.sender ; server.receive-request To rpc.receiver }",,,,,,,,,,,,,,,,,,
+5,ADD_CONNECTOR,ACME,Add a new connector rpcConn1 of type RPCConnector to simplePF,"System simplePF : PipeFilterFam = {
+  Connector rpcConn1 : RPCConnector;}","System simplePF : PipeFilterFam = {
+  Connector rpcConn1 : RPCConnector;}","System simplePF : PipeFilterFam = {
+  Connector rpcConn1 : RPCConnector;}",,,,,,,,,,,,,,,,,,
+6,ADD_COMPONENT,AADL,Extend the CCU_system architecture with a Authenticator component named authenticator1,"subcomponents CCU: system CCU_system;
+    authenticator1 : process Authenticator; throttle_actuator: device throttle_actuator; M555: processor M555; CANBus: bus CANBus.impl;","subcomponents CCU: system CCU_system;
+    authenticator1 : process Authenticator; throttle_actuator: device throttle_actionuator; M555: processor M55 5; CANBus: bus CANBus.impl;","subcomponents CCU: system CCU_system;
+    authenticator1 : process Authenticator;M555: processor M555; CANBus: bus CANBus.impl;",,,,,,,,,,,,,,,,,,
+8,ADD_PORT,AADL,Insert a new feedback_port interface into control,"thread control features mc_in: port group mode_control_group_inverse; 
+  port feedback_port : requires data access;
+end control;","thread control features mc_in: port group mode_control_group_inverse; 
+  port feedback_port : requires data access;
+end control;","thread control features mc_in: port group mode_control_group_inverse; 
+  port feedback_port : requires data access;
+end control;",,,,,,,,,,,,,,,,,,
+15,DELETE_CONNECTOR,ACME,Drop the monitorLink connector from the ADL specification,"System LogicSystem = {
+  Component dispatcher : CacheUnit;
+  Component analyzer : Transformer;
+  Component subscriber : Balancer;
+  }","System LogicSystem = {
+  Component dispatcher : CacheUnit;
+ Component analyzer : Transformer;
+ e Component subscriber : Balancer;
+ }","System LogicSystem = {
+  Component dispatcher : CacheUnit;
+ Component analyzer : Transformer;
+ A Component subscriber : Balancer;
+ }",,,,,,,,,,,,,,,,,,
+17,MODIFY_PROPERTY,ACME,Set buffered of clearanceRequest to false,"Connector clearanceRequest = { Roles { requestor; grantor } 
+  Properties {
+    buffered = false;
+  }
+}","Connector clearanceRequest = { Roles { requestor; grantor } 
+  Properties {
+    buffered = false;
+  }
+}","Connector clearanceRequest = { Roles { requestor; grantor } 
+  Properties {
+    buffered = false;
+  }
+}",,,,,,,,,,,,,,,,,,
+18,DELETE_CONNECTOR,ACME,Drop the monitorLink connector from the ADL specification,"System EmbeddedSystem = {
+  Component logger : Router;
+  Component subscriber : Actuator;
+  Connector msgPipe : MessagePipe;
+  }","System EmbeddedSystem = {
+  Component logger : Router;
+ Component subscriber : Actuator;
+ e Connector msgPipe : MessagePipe;
+ }","System EmbeddedSystem = {
+  Component logger : Router;
+ Component subscriber : Actuator;
+ A Connector msgPipe : MessagePipe;
+ }",,,,,,,,,,,,,,,,,,
+21,ADD_CONNECTOR,ACME,Insert a new rpcConn1 connector of type RPCConnector into MainSystem,"Connector rpcConn1 : RPCConnector;
+  Attachments { client.send-request to rpc.sender ; server.receive-request to rpc.receiver }","Connector rpcConn1 : RPCConnector;
+  Attachments { client.send-request to rpc.sender ; server.receive-request from rpc.receiver }","Connector rpcConn1 : RPCConnector;
+  Attachments { client.send-request to rpc.sender ; server.receive-request To rpc.receiver }",,,,,,,,,,,,,,,,,,
+22,ADD_COMPONENT,ACME,Append a Cache component cache1 to the MainSystem architecture,"Component Template client(rpc-call-ports : Ports) = { Ports rpc-call-ports; Properties { Aesop-style : style-id = client-server; Unicon-style : style-id = cs; producer-code : external = ""CODE-LIB/client.c"" }
+  Component cache1 : Cache;
+}","Component Template client(rpc-call-ports : Ports) = { Ports rpc-calls-ports; Properties { Aesop-style : style-id = client-server; Unicon-style: style-Id = cs; producer-code : external = ""CODE-LIB/client.c"" }
+  Component cache1 : Cache;
+}","Component Template client(rpc-call-ports : Ports) = { Ports rpc-call -ports; Properties { Aesop-style : style-id = client-server; Unicon-style: style-Id = cs; producer-code : external = ""CODE-LIB/client.c"" }
+  Component cache1 : Cache;
+}",,,,,,,,,,,,,,,,,,
+25,ADD_CONNECTOR,ACME,Extend the MainSystem architecture with a AsyncPipe connector named asyncPipe1,"Component BackupServer = new ServerT extended with { Dependencies { 
+  Connector asyncPipe1 : AsyncPipe;
+  Attachments { Conn.servicer to BackupServer.service; }}}","Component BackupServer = new ServerT extended with { Dependencies { 
+  Connector asyncPipe1 : AsyncPipe;
+  Attachments { Conn.servicer to BackupServer.service; }}}","Component BackupServer = new ServerT extended with { Dependencies { 
+  Connector asyncPipe1 : AsyncPipe;
+  Attachments { Conn.servicer to BackupServer.service; }}}",,,,,,,,,,,,,,,,,,
+26,DELETE_CONNECTOR,ACME,Strip the PipeT connector out of the architecture,Family PipesAndFiltersFam = { Component Type FilterT = {};  };,Family PipesAndFiltersFam = { Component Type FilterT = {};  };,Family PipesAndFiltersFam = { Component Type FilterT = {};  };,,,,,,,,,,,,,,,,,,
+36,ADD_COMPONENT,AADL,Insert a new healthChecker1 component of type HealthChecker into MainSystem,"Port i_loginname = { Properties { PortType: Enum{IN,OUTPUT} = IN; DataType: String = ""string""; DataSize: Integer = 40; } } Port i_secret = { Properties { PortType: Enum{IN,OUTPUT} = IN; DataType: String = ""string""; DataSize: Integer = 40; } } Port i_security_level = { Properties { PortType: Enum{IN,OUTPUT} = IN; DataType: String = ""integer""; } }
+  subcomponents
+    healthchecker1 : process HealthChecker;","Port i_loginname = { Properties { PortType: Enum{IN,OUTPUT} = IN; DataType: String = ""string""; DataSize: Integer = 40; } } Port i_secret = { Props { Porttype: Enum {IN,INPUT} =IN; DataType. String = 0.95; DataSize : Integer = true; } ; Port i _security_level = { properties { PortT: Enum(IN,OUT} = OUT; DataType : String = 'integer""; } }
+  subcomponents
+    healthchecker1 : process HealthChecker;","Port i_loginname = { Properties { PortType: Enum{IN,OUTPUT} = IN; DataType: String = ""string""; DataSize: Integer = 40; } } Port i_secret = { Props { Porttype: Enum(IN,OUT} =IN; DataType, String = 0.95; DataSize= Integer = true; } }, Port i _security_level = { properties { Port Type: Enum{}IN,INPUT} = In; DataType= String = 1.95""; } }
+  subcomponents
+    healthchecker1 : process HealthChecker;",,,,,,,,,,,,,,,,,,
+41,DELETE_CONNECTOR,ACME,Delete the dataLink connector from the architecture,"System ProcessSystem = {
+  Component monitor : Monitor;
+  Component handler : Subscriber;
+  Connector syncBus : SyncBus;
+  }","System ProcessSystem = {
+  Component monitor : Monitor;
+ Component handler : Subscriber;
+ e Connector syncBus : SyncBus;
+ }","System ProcessSystem = {
+  Component monitor : Monitor;
+ Component handler : Subscriber;
+ A Connector syncBus : SyncBus;
+ }",,,,,,,,,,,,,,,,,,
+44,DELETE_COMPONENT,AADL,Eliminate the validator component from the design,"system implementation SensorSystem.impl
+  subcomponents
+    subscriber: process Processor;
+  connections
+    auditBus: bus access AuditBus;
+end SensorSystem.impl;","system implementation SensorSystem.impl
+  subcomponents
+    subscriber: process Processor;
+  connections
+    auditBus: bus access AuditBus;
+end SensorSystem._impl;","system implementation SensorSystem.impl
+  subcomponents
+    subscriber: process Processor;
+  connections
+    auditBus: bus access AuditBus;
+end SensorSystem._impl;",,,,,,,,,,,,,,,,,,
+46,ADD_PORT,AADL,Extend X_1553 with a audit_port port,"bus X_1553 features A629: requires bus access ARRECEIVEC_629.HS_629; 
+  port audit_port : requires data access;
+end X_1553;","bus X_1553 features A629: requires bus access ARRECEIVEC_629.HS_628; 
+  port audit_port : requires data access;
+end X_1333;","bus X_1553 features A629: requires bus access ARRECEIVEC_629.HS_628; 
+  port audit_port : requires data access;
+end X_1533;",,,,,,,,,,,,,,,,,,
+86,MODIFY_PROPERTY,AADL,Update controller Fault_Tolerance value to false,"system controller features fromC1, fromC2: in event port; Prim1, Prim2: out event port; 
+  properties
+    Fault_Tolerance => false;
+end controller;","system controller features fromC1, fromC2: in event port; Prim1, Prim2: out event port, 
+  properties
+    Fault_Tolerance => false;
+end controller;","system controller features fromC1, fromC2: in event port; Prim1, Prim2: out event port); 
+  properties
+    Fault_Tolerance => false;
+end controller;",,,,,,,,,,,,,,,,,,
+88,ADD_PORT,AADL,Augment control_out with a new control_port interface,"thread control_out 
+  port control_port : requires data access;
+end control_out;","thread control_out 
+  port control_port : requires data access;
+end control_output;","thread control_out 
+  port control_port : requires data access;
+end control_ out;",,,,,,,,,,,,,,,,,,
+102,MODIFY_PROPERTY,ACME,Update client maxConnections value to 100,"Component client = { Port sendRequest 
+  Properties {
+    maxConnections = 100;
+  }
+}","Component client = { Port sendRequest 
+  Properties {
+    maxConnections = 100;
+  }
+}","Component client = { Port sendRequest 
+  Properties {
+    maxConnections = 100;
+  }
+}",,,,,,,,,,,,,,,,,,
+114,DELETE_COMPONENT,AADL,Eliminate the transformer component from the design,"system implementation NetSystem.impl
+  subcomponents
+    sensor: thread Validator;
+    publisher: process Dispatcher;
+  connections
+    dataLink: bus access DataLink;
+  properties
+    Security_Level => medium;
+end NetSystem.impl;","system implementation NetSystem.impl
+  subcomponents
+    sensor: thread Validator;
+    publisher: process Dispatcher;
+  connections
+    dataLink: bus access DataLink;
+ * properties
+    Security_Level => medium;
+end NetSystem._impl;","system implementation NetSystem.impl
+  subcomponents
+    sensor: thread Validator;
+    publisher: process Dispatcher;
+  connections
+    dataLink: bus access DataLink;",,,,,,,,,,,,,,,,,,
+119,DELETE_COMPONENT,ACME,Delete coordinator from the architectural specification,"System MonitorSystem = {
+  Component subscriber : Coordinator;
+  Component balancer : Balancer;
+  }","System MonitorSystem = {
+  Component subscriber : Coordinator;
+ e Component balancer : Balancer;
+  }","System MonitorSystem = {
+  Component subscriber : Coordinator;
+ Component balancer : Balancer;
+ : }",,,,,,,,,,,,,,,,,,

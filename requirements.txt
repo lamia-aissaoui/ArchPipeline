@@ -1,0 +1,34 @@
+# ArchPipeline — Python dependencies
+#
+# IMPORTANT: this file lists the packages actually imported across the 8
+# notebooks, without pinned versions. For full reproducibility, regenerate
+# this file from the exact Colab environment used to produce the reported
+# results, e.g.:
+#
+#   pip freeze > requirements-frozen.txt
+#
+# and commit BOTH files (this loose one for readability, the frozen one
+# for exact reproduction).
+
+torch
+transformers
+datasets
+accelerate
+sentencepiece
+
+# Metrics
+rouge_score
+bert_score
+nltk
+scipy
+scikit-learn
+
+# Data handling
+numpy
+pandas
+
+# LLM baseline comparison (notebook 06)
+groq
+
+# Notebook environment (only needed if running on Google Colab)
+# google-colab  # pre-installed on Colab, not pip-installable elsewhere

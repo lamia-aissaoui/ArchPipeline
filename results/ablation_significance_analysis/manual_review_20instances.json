@@ -1,0 +1,182 @@
+[
+  {
+    "id": 0,
+    "operation": "ADD_CONNECTOR",
+    "adl_type": "ACME",
+    "request": "Insert a new msgQueue1 connector of type MessageQueue into MainSystem",
+    "reference": "Connector msgQueue1 : MessageQueue;\n  Attachments { client.send-request to rpc.sender ; server.receive-request to rpc.receiver }",
+    "archpipeline_pred": "Connector msgQueue1 : MessageQueue;\n  Attachments { client.send-request to rpc.sender ; server.receive-request from rpc.receiver }",
+    "ablation_pred": "Connector msgQueue1 : MessageQueue;\n  Attachments { client.send-request to rpc.sender ; server.receive-request To rpc.receiver }"
+  },
+  {
+    "id": 5,
+    "operation": "ADD_CONNECTOR",
+    "adl_type": "ACME",
+    "request": "Add a new connector rpcConn1 of type RPCConnector to simplePF",
+    "reference": "System simplePF : PipeFilterFam = {\n  Connector rpcConn1 : RPCConnector;}",
+    "archpipeline_pred": "System simplePF : PipeFilterFam = {\n  Connector rpcConn1 : RPCConnector;}",
+    "ablation_pred": "System simplePF : PipeFilterFam = {\n  Connector rpcConn1 : RPCConnector;}"
+  },
+  {
+    "id": 6,
+    "operation": "ADD_COMPONENT",
+    "adl_type": "AADL",
+    "request": "Extend the CCU_system architecture with a Authenticator component named authenticator1",
+    "reference": "subcomponents CCU: system CCU_system;\n    authenticator1 : process Authenticator; throttle_actuator: device throttle_actuator; M555: processor M555; CANBus: bus CANBus.impl;",
+    "archpipeline_pred": "subcomponents CCU: system CCU_system;\n    authenticator1 : process Authenticator; throttle_actuator: device throttle_actionuator; M555: processor M55 5; CANBus: bus CANBus.impl;",
+    "ablation_pred": "subcomponents CCU: system CCU_system;\n    authenticator1 : process Authenticator;M555: processor M555; CANBus: bus CANBus.impl;"
+  },
+  {
+    "id": 8,
+    "operation": "ADD_PORT",
+    "adl_type": "AADL",
+    "request": "Insert a new feedback_port interface into control",
+    "reference": "thread control features mc_in: port group mode_control_group_inverse; \n  port feedback_port : requires data access;\nend control;",
+    "archpipeline_pred": "thread control features mc_in: port group mode_control_group_inverse; \n  port feedback_port : requires data access;\nend control;",
+    "ablation_pred": "thread control features mc_in: port group mode_control_group_inverse; \n  port feedback_port : requires data access;\nend control;"
+  },
+  {
+    "id": 15,
+    "operation": "DELETE_CONNECTOR",
+    "adl_type": "ACME",
+    "request": "Drop the monitorLink connector from the ADL specification",
+    "reference": "System LogicSystem = {\n  Component dispatcher : CacheUnit;\n  Component analyzer : Transformer;\n  Component subscriber : Balancer;\n  }",
+    "archpipeline_pred": "System LogicSystem = {\n  Component dispatcher : CacheUnit;\n Component analyzer : Transformer;\n e Component subscriber : Balancer;\n }",
+    "ablation_pred": "System LogicSystem = {\n  Component dispatcher : CacheUnit;\n Component analyzer : Transformer;\n A Component subscriber : Balancer;\n }"
+  },
+  {
+    "id": 17,
+    "operation": "MODIFY_PROPERTY",
+    "adl_type": "ACME",
+    "request": "Set buffered of clearanceRequest to false",
+    "reference": "Connector clearanceRequest = { Roles { requestor; grantor } \n  Properties {\n    buffered = false;\n  }\n}",
+    "archpipeline_pred": "Connector clearanceRequest = { Roles { requestor; grantor } \n  Properties {\n    buffered = false;\n  }\n}",
+    "ablation_pred": "Connector clearanceRequest = { Roles { requestor; grantor } \n  Properties {\n    buffered = false;\n  }\n}"
+  },
+  {
+    "id": 18,
+    "operation": "DELETE_CONNECTOR",
+    "adl_type": "ACME",
+    "request": "Drop the monitorLink connector from the ADL specification",
+    "reference": "System EmbeddedSystem = {\n  Component logger : Router;\n  Component subscriber : Actuator;\n  Connector msgPipe : MessagePipe;\n  }",
+    "archpipeline_pred": "System EmbeddedSystem = {\n  Component logger : Router;\n Component subscriber : Actuator;\n e Connector msgPipe : MessagePipe;\n }",
+    "ablation_pred": "System EmbeddedSystem = {\n  Component logger : Router;\n Component subscriber : Actuator;\n A Connector msgPipe : MessagePipe;\n }"
+  },
+  {
+    "id": 21,
+    "operation": "ADD_CONNECTOR",
+    "adl_type": "ACME",
+    "request": "Insert a new rpcConn1 connector of type RPCConnector into MainSystem",
+    "reference": "Connector rpcConn1 : RPCConnector;\n  Attachments { client.send-request to rpc.sender ; server.receive-request to rpc.receiver }",
+    "archpipeline_pred": "Connector rpcConn1 : RPCConnector;\n  Attachments { client.send-request to rpc.sender ; server.receive-request from rpc.receiver }",
+    "ablation_pred": "Connector rpcConn1 : RPCConnector;\n  Attachments { client.send-request to rpc.sender ; server.receive-request To rpc.receiver }"
+  },
+  {
+    "id": 22,
+    "operation": "ADD_COMPONENT",
+    "adl_type": "ACME",
+    "request": "Append a Cache component cache1 to the MainSystem architecture",
+    "reference": "Component Template client(rpc-call-ports : Ports) = { Ports rpc-call-ports; Properties { Aesop-style : style-id = client-server; Unicon-style : style-id = cs; producer-code : external = \"CODE-LIB/client.c\" }\n  Component cache1 : Cache;\n}",
+    "archpipeline_pred": "Component Template client(rpc-call-ports : Ports) = { Ports rpc-calls-ports; Properties { Aesop-style : style-id = client-server; Unicon-style: style-Id = cs; producer-code : external = \"CODE-LIB/client.c\" }\n  Component cache1 : Cache;\n}",
+    "ablation_pred": "Component Template client(rpc-call-ports : Ports) = { Ports rpc-call -ports; Properties { Aesop-style : style-id = client-server; Unicon-style: style-Id = cs; producer-code : external = \"CODE-LIB/client.c\" }\n  Component cache1 : Cache;\n}"
+  },
+  {
+    "id": 25,
+    "operation": "ADD_CONNECTOR",
+    "adl_type": "ACME",
+    "request": "Extend the MainSystem architecture with a AsyncPipe connector named asyncPipe1",
+    "reference": "Component BackupServer = new ServerT extended with { Dependencies { \n  Connector asyncPipe1 : AsyncPipe;\n  Attachments { Conn.servicer to BackupServer.service; }}}",
+    "archpipeline_pred": "Component BackupServer = new ServerT extended with { Dependencies { \n  Connector asyncPipe1 : AsyncPipe;\n  Attachments { Conn.servicer to BackupServer.service; }}}",
+    "ablation_pred": "Component BackupServer = new ServerT extended with { Dependencies { \n  Connector asyncPipe1 : AsyncPipe;\n  Attachments { Conn.servicer to BackupServer.service; }}}"
+  },
+  {
+    "id": 26,
+    "operation": "DELETE_CONNECTOR",
+    "adl_type": "ACME",
+    "request": "Strip the PipeT connector out of the architecture",
+    "reference": "Family PipesAndFiltersFam = { Component Type FilterT = {};  };",
+    "archpipeline_pred": "Family PipesAndFiltersFam = { Component Type FilterT = {};  };",
+    "ablation_pred": "Family PipesAndFiltersFam = { Component Type FilterT = {};  };"
+  },
+  {
+    "id": 36,
+    "operation": "ADD_COMPONENT",
+    "adl_type": "AADL",
+    "request": "Insert a new healthChecker1 component of type HealthChecker into MainSystem",
+    "reference": "Port i_loginname = { Properties { PortType: Enum{IN,OUTPUT} = IN; DataType: String = \"string\"; DataSize: Integer = 40; } } Port i_secret = { Properties { PortType: Enum{IN,OUTPUT} = IN; DataType: String = \"string\"; DataSize: Integer = 40; } } Port i_security_level = { Properties { PortType: Enum{IN,OUTPUT} = IN; DataType: String = \"integer\"; } }\n  subcomponents\n    healthchecker1 : process HealthChecker;",
+    "archpipeline_pred": "Port i_loginname = { Properties { PortType: Enum{IN,OUTPUT} = IN; DataType: String = \"string\"; DataSize: Integer = 40; } } Port i_secret = { Props { Porttype: Enum {IN,INPUT} =IN; DataType. String = 0.95; DataSize : Integer = true; } ; Port i _security_level = { properties { PortT: Enum(IN,OUT} = OUT; DataType : String = 'integer\"; } }\n  subcomponents\n    healthchecker1 : process HealthChecker;",
+    "ablation_pred": "Port i_loginname = { Properties { PortType: Enum{IN,OUTPUT} = IN; DataType: String = \"string\"; DataSize: Integer = 40; } } Port i_secret = { Props { Porttype: Enum(IN,OUT} =IN; DataType, String = 0.95; DataSize= Integer = true; } }, Port i _security_level = { properties { Port Type: Enum{}IN,INPUT} = In; DataType= String = 1.95\"; } }\n  subcomponents\n    healthchecker1 : process HealthChecker;"
+  },
+  {
+    "id": 41,
+    "operation": "DELETE_CONNECTOR",
+    "adl_type": "ACME",
+    "request": "Delete the dataLink connector from the architecture",
+    "reference": "System ProcessSystem = {\n  Component monitor : Monitor;\n  Component handler : Subscriber;\n  Connector syncBus : SyncBus;\n  }",
+    "archpipeline_pred": "System ProcessSystem = {\n  Component monitor : Monitor;\n Component handler : Subscriber;\n e Connector syncBus : SyncBus;\n }",
+    "ablation_pred": "System ProcessSystem = {\n  Component monitor : Monitor;\n Component handler : Subscriber;\n A Connector syncBus : SyncBus;\n }"
+  },
+  {
+    "id": 44,
+    "operation": "DELETE_COMPONENT",
+    "adl_type": "AADL",
+    "request": "Eliminate the validator component from the design",
+    "reference": "system implementation SensorSystem.impl\n  subcomponents\n    subscriber: process Processor;\n  connections\n    auditBus: bus access AuditBus;\nend SensorSystem.impl;",
+    "archpipeline_pred": "system implementation SensorSystem.impl\n  subcomponents\n    subscriber: process Processor;\n  connections\n    auditBus: bus access AuditBus;\nend SensorSystem._impl;",
+    "ablation_pred": "system implementation SensorSystem.impl\n  subcomponents\n    subscriber: process Processor;\n  connections\n    auditBus: bus access AuditBus;\nend SensorSystem._impl;"
+  },
+  {
+    "id": 46,
+    "operation": "ADD_PORT",
+    "adl_type": "AADL",
+    "request": "Extend X_1553 with a audit_port port",
+    "reference": "bus X_1553 features A629: requires bus access ARRECEIVEC_629.HS_629; \n  port audit_port : requires data access;\nend X_1553;",
+    "archpipeline_pred": "bus X_1553 features A629: requires bus access ARRECEIVEC_629.HS_628; \n  port audit_port : requires data access;\nend X_1333;",
+    "ablation_pred": "bus X_1553 features A629: requires bus access ARRECEIVEC_629.HS_628; \n  port audit_port : requires data access;\nend X_1533;"
+  },
+  {
+    "id": 86,
+    "operation": "MODIFY_PROPERTY",
+    "adl_type": "AADL",
+    "request": "Update controller Fault_Tolerance value to false",
+    "reference": "system controller features fromC1, fromC2: in event port; Prim1, Prim2: out event port; \n  properties\n    Fault_Tolerance => false;\nend controller;",
+    "archpipeline_pred": "system controller features fromC1, fromC2: in event port; Prim1, Prim2: out event port, \n  properties\n    Fault_Tolerance => false;\nend controller;",
+    "ablation_pred": "system controller features fromC1, fromC2: in event port; Prim1, Prim2: out event port); \n  properties\n    Fault_Tolerance => false;\nend controller;"
+  },
+  {
+    "id": 88,
+    "operation": "ADD_PORT",
+    "adl_type": "AADL",
+    "request": "Augment control_out with a new control_port interface",
+    "reference": "thread control_out \n  port control_port : requires data access;\nend control_out;",
+    "archpipeline_pred": "thread control_out \n  port control_port : requires data access;\nend control_output;",
+    "ablation_pred": "thread control_out \n  port control_port : requires data access;\nend control_ out;"
+  },
+  {
+    "id": 102,
+    "operation": "MODIFY_PROPERTY",
+    "adl_type": "ACME",
+    "request": "Update client maxConnections value to 100",
+    "reference": "Component client = { Port sendRequest \n  Properties {\n    maxConnections = 100;\n  }\n}",
+    "archpipeline_pred": "Component client = { Port sendRequest \n  Properties {\n    maxConnections = 100;\n  }\n}",
+    "ablation_pred": "Component client = { Port sendRequest \n  Properties {\n    maxConnections = 100;\n  }\n}"
+  },
+  {
+    "id": 114,
+    "operation": "DELETE_COMPONENT",
+    "adl_type": "AADL",
+    "request": "Eliminate the transformer component from the design",
+    "reference": "system implementation NetSystem.impl\n  subcomponents\n    sensor: thread Validator;\n    publisher: process Dispatcher;\n  connections\n    dataLink: bus access DataLink;\n  properties\n    Security_Level => medium;\nend NetSystem.impl;",
+    "archpipeline_pred": "system implementation NetSystem.impl\n  subcomponents\n    sensor: thread Validator;\n    publisher: process Dispatcher;\n  connections\n    dataLink: bus access DataLink;\n * properties\n    Security_Level => medium;\nend NetSystem._impl;",
+    "ablation_pred": "system implementation NetSystem.impl\n  subcomponents\n    sensor: thread Validator;\n    publisher: process Dispatcher;\n  connections\n    dataLink: bus access DataLink;"
+  },
+  {
+    "id": 119,
+    "operation": "DELETE_COMPONENT",
+    "adl_type": "ACME",
+    "request": "Delete coordinator from the architectural specification",
+    "reference": "System MonitorSystem = {\n  Component subscriber : Coordinator;\n  Component balancer : Balancer;\n  }",
+    "archpipeline_pred": "System MonitorSystem = {\n  Component subscriber : Coordinator;\n e Component balancer : Balancer;\n  }",
+    "ablation_pred": "System MonitorSystem = {\n  Component subscriber : Coordinator;\n Component balancer : Balancer;\n : }"
+  }
+]

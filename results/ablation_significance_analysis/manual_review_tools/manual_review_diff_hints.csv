@@ -1,0 +1,21 @@
+id,operation,diff_archpipeline_vs_reference,diff_direct_evolution_vs_reference
+0,ADD_CONNECTOR,[to → from],[to → To]
+5,ADD_CONNECTOR,(identique à la référence),(identique à la référence)
+6,ADD_COMPONENT,[throttle_actuator; → throttle_actionuator;]; [M555; → M55 5;],[Authenticator; throttle_actuator: device throttle_actuator; M555: → Authenticator;M555:]
+8,ADD_PORT,(identique à la référence),(identique à la référence)
+15,DELETE_CONNECTOR,[∅ → e],[∅ → A]
+17,MODIFY_PROPERTY,(identique à la référence),(identique à la référence)
+18,DELETE_CONNECTOR,[∅ → e],[∅ → A]
+21,ADD_CONNECTOR,[to → from],[to → To]
+22,ADD_COMPONENT,[rpc-call-ports; → rpc-calls-ports;]; [Unicon-style : style-id → Unicon-style: style-Id],[rpc-call-ports; → rpc-call -ports;]; [Unicon-style : style-id → Unicon-style: style-Id]
+25,ADD_CONNECTOR,(identique à la référence),(identique à la référence)
+26,DELETE_CONNECTOR,(identique à la référence),(identique à la référence)
+36,ADD_COMPONENT,"[Properties → Props]; [PortType: Enum{IN,OUTPUT} = IN; DataType: → Porttype: Enum {IN,INPUT} =IN; DataType.]; [""string""; DataSize: → 0.95; DataSize :]; [40; → true;]; [} → ;]; [i_security_level → i _security_level]; [Properties → properties]; [PortType: Enum{IN,OUTPUT} → PortT: Enum(IN,OUT}]; [IN; DataType: → OUT; DataType :]; [""integer""; → 'integer"";]","[Properties → Props]; [PortType: Enum{IN,OUTPUT} = IN; DataType: → Porttype: Enum(IN,OUT} =IN; DataType,]; [""string""; DataSize: → 0.95; DataSize=]; [40; → true;]; [} → },]; [i_security_level → i _security_level]; [Properties → properties]; [PortType: Enum{IN,OUTPUT} → Port Type: Enum{}IN,INPUT}]; [IN; DataType: → In; DataType=]; [""integer""; → 1.95"";]"
+41,DELETE_CONNECTOR,[∅ → e],[∅ → A]
+44,DELETE_COMPONENT,[SensorSystem.impl; → SensorSystem._impl;],[SensorSystem.impl; → SensorSystem._impl;]
+46,ADD_PORT,[ARRECEIVEC_629.HS_629; → ARRECEIVEC_629.HS_628;]; [X_1553; → X_1333;],[ARRECEIVEC_629.HS_629; → ARRECEIVEC_629.HS_628;]; [X_1553; → X_1533;]
+86,MODIFY_PROPERTY,"[port; → port,]",[port; → port);]
+88,ADD_PORT,[control_out; → control_output;],[control_out; → control_ out;]
+102,MODIFY_PROPERTY,(identique à la référence),(identique à la référence)
+114,DELETE_COMPONENT,[∅ → *]; [NetSystem.impl; → NetSystem._impl;],[properties Security_Level => medium; end NetSystem.impl; → ∅]
+119,DELETE_COMPONENT,[∅ → e],[∅ → :]
