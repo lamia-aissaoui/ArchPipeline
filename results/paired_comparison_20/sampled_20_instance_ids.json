@@ -1,0 +1,162 @@
+[
+  {
+    "id": 86,
+    "operation": "MODIFY_PROPERTY",
+    "adl_type": "AADL",
+    "difficulte": "easy",
+    "source": "comp800_v5_injected",
+    "distance_train": 0.8358
+  },
+  {
+    "id": 21,
+    "operation": "ADD_CONNECTOR",
+    "adl_type": "ACME",
+    "difficulte": "medium",
+    "source": "comp800_v5",
+    "distance_train": 0.826
+  },
+  {
+    "id": 17,
+    "operation": "MODIFY_PROPERTY",
+    "adl_type": "ACME",
+    "difficulte": "easy",
+    "source": "comp800_v5_injected",
+    "distance_train": 0.8367
+  },
+  {
+    "id": 8,
+    "operation": "ADD_PORT",
+    "adl_type": "AADL",
+    "difficulte": "easy",
+    "source": "comp800_v5",
+    "distance_train": 0.8247
+  },
+  {
+    "id": 88,
+    "operation": "ADD_PORT",
+    "adl_type": "AADL",
+    "difficulte": "easy",
+    "source": "comp800_v5",
+    "distance_train": 0.8284
+  },
+  {
+    "id": 44,
+    "operation": "DELETE_COMPONENT",
+    "adl_type": "AADL",
+    "difficulte": "hard",
+    "source": "synthetic_v5",
+    "distance_train": 0.798
+  },
+  {
+    "id": 0,
+    "operation": "ADD_CONNECTOR",
+    "adl_type": "ACME",
+    "difficulte": "medium",
+    "source": "comp800_v5",
+    "distance_train": 0.8238
+  },
+  {
+    "id": 119,
+    "operation": "DELETE_COMPONENT",
+    "adl_type": "ACME",
+    "difficulte": "hard",
+    "source": "synthetic_v5",
+    "distance_train": 0.8131
+  },
+  {
+    "id": 41,
+    "operation": "DELETE_CONNECTOR",
+    "adl_type": "ACME",
+    "difficulte": "hard",
+    "source": "synthetic_v5",
+    "distance_train": 0.8191
+  },
+  {
+    "id": 26,
+    "operation": "DELETE_CONNECTOR",
+    "adl_type": "ACME",
+    "difficulte": "hard",
+    "source": "comp800_v5",
+    "distance_train": 0.8207
+  },
+  {
+    "id": 18,
+    "operation": "DELETE_CONNECTOR",
+    "adl_type": "ACME",
+    "difficulte": "hard",
+    "source": "synthetic_v5",
+    "distance_train": 0.8243
+  },
+  {
+    "id": 6,
+    "operation": "ADD_COMPONENT",
+    "adl_type": "AADL",
+    "difficulte": "medium",
+    "source": "comp800_v5",
+    "distance_train": 0.8103
+  },
+  {
+    "id": 25,
+    "operation": "ADD_CONNECTOR",
+    "adl_type": "ACME",
+    "difficulte": "medium",
+    "source": "comp800_v5",
+    "distance_train": 0.8065
+  },
+  {
+    "id": 114,
+    "operation": "DELETE_COMPONENT",
+    "adl_type": "AADL",
+    "difficulte": "hard",
+    "source": "synthetic_v5",
+    "distance_train": 0.7975
+  },
+  {
+    "id": 22,
+    "operation": "ADD_COMPONENT",
+    "adl_type": "ACME",
+    "difficulte": "medium",
+    "source": "comp800_v5",
+    "distance_train": 0.8451
+  },
+  {
+    "id": 5,
+    "operation": "ADD_CONNECTOR",
+    "adl_type": "ACME",
+    "difficulte": "medium",
+    "source": "comp800_v5",
+    "distance_train": 0.803
+  },
+  {
+    "id": 102,
+    "operation": "MODIFY_PROPERTY",
+    "adl_type": "ACME",
+    "difficulte": "easy",
+    "source": "comp800_v5_injected",
+    "distance_train": 0.8205
+  },
+  {
+    "id": 46,
+    "operation": "ADD_PORT",
+    "adl_type": "AADL",
+    "difficulte": "easy",
+    "source": "comp800_v5",
+    "distance_train": 0.8226
+  },
+  {
+    "id": 15,
+    "operation": "DELETE_CONNECTOR",
+    "adl_type": "ACME",
+    "difficulte": "hard",
+    "source": "synthetic_v5",
+    "distance_train": 0.8123
+  },
+  {
+    "id": 36,
+    "operation": "ADD_COMPONENT",
+    "adl_type": "AADL",
+    "difficulte": "medium",
+    "source": "comp800_v5",
+    "distance_train": 0.8274
+  }
+]
