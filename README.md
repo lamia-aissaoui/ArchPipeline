@@ -73,11 +73,22 @@ reconstruction (Eq. 1) implemented in `03_testset_cleaning.ipynb`.
 ## Model checkpoints
 
 Trained checkpoints (6 comprehension backbones + 5 evolution configurations, including
-the Direct Evolution ablation) are hosted on HuggingFace Hub:
-- `<org>/archpipeline-comprehension-<backbone>` (6 repos)
-- `<org>/archpipeline-evolution-<backbone>-<strategy>` (5 repos)
+the Direct Evolution ablation) are hosted on HuggingFace Hub under [lamia24](https://huggingface.co/lamia24):
 
-*(Replace the placeholders above with your actual HuggingFace Hub repo IDs once uploaded.)*
+**Comprehension phase:**
+- [lamia24/archpipeline-comprehension-t5base](https://huggingface.co/lamia24/archpipeline-comprehension-t5base)
+- [lamia24/archpipeline-comprehension-codet5base](https://huggingface.co/lamia24/archpipeline-comprehension-codet5base)
+- [lamia24/archpipeline-comprehension-unixcoder](https://huggingface.co/lamia24/archpipeline-comprehension-unixcoder)
+- [lamia24/archpipeline-comprehension-flant5base](https://huggingface.co/lamia24/archpipeline-comprehension-flant5base)
+- [lamia24/archpipeline-comprehension-codet5plus770m](https://huggingface.co/lamia24/archpipeline-comprehension-codet5plus770m)
+- [lamia24/archpipeline-comprehension-bartlarge](https://huggingface.co/lamia24/archpipeline-comprehension-bartlarge)
+
+**Evolution phase:**
+- [lamia24/archpipeline-evolution-codet5base-stratA](https://huggingface.co/lamia24/archpipeline-evolution-codet5base-stratA) — full fine-tuning, **model selected for ArchPipeline**
+- [lamia24/archpipeline-evolution-codet5base-stratB](https://huggingface.co/lamia24/archpipeline-evolution-codet5base-stratB) — frozen encoder
+- [lamia24/archpipeline-evolution-codet5plus-stratA](https://huggingface.co/lamia24/archpipeline-evolution-codet5plus-stratA) — full fine-tuning
+- [lamia24/archpipeline-evolution-codet5plus-stratB](https://huggingface.co/lamia24/archpipeline-evolution-codet5plus-stratB) — frozen encoder
+- [lamia24/archpipeline-evolution-ablation-directevolution](https://huggingface.co/lamia24/archpipeline-evolution-ablation-directevolution) — ablation (no two-phase transfer)
 
 ## Reproducing the results
 
