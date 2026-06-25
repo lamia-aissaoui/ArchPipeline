@@ -1,0 +1,59 @@
+{
+    "modele": "CodeT5base_StratB_FrozenEnc",
+    "nb_test": 120,
+    "EM": 0.3333333333333333,
+    "BLEU": 0.5617166120020941,
+    "Smooth_BLEU": 0.5617166120020941,
+    "ROUGE-1": 0.9074430896071118,
+    "ROUGE-2": 0.8711344568246212,
+    "ROUGE-L": 0.904486687435812,
+    "METEOR": 0.8476309097427713,
+    "BERT-P": 0.9992523193359375,
+    "BERT-R": 0.9992523193359375,
+    "BERT-F1": 0.9992523193359375,
+    "validite_syntaxique": {
+        "validite_globale": 0.9583333333333334,
+        "validite_ACME": 0.9852941176470589,
+        "validite_AADL": 0.9230769230769231,
+        "nb_valides": 115,
+        "nb_total": 120
+    },
+    "precision_operationnelle": {
+        "ADD_CONNECTOR": {
+            "correct": 20,
+            "total": 20,
+            "precision": 1.0
+        },
+        "DELETE_CONNECTOR": {
+            "correct": 20,
+            "total": 20,
+            "precision": 1.0
+        },
+        "MODIFY_PROPERTY": {
+            "correct": 19,
+            "total": 20,
+            "precision": 0.95
+        },
+        "ADD_COMPONENT": {
+            "correct": 12,
+            "total": 20,
+            "precision": 0.6
+        },
+        "ADD_PORT": {
+            "correct": 20,
+            "total": 20,
+            "precision": 1.0
+        },
+        "DELETE_COMPONENT": {
+            "correct": 20,
+            "total": 20,
+            "precision": 1.0
+        },
+        "GLOBAL": {
+            "correct": 111,
+            "total": 120,
+            "precision": 0.925
+        }
+    },
+    "score_composite": 0.9288
+}
